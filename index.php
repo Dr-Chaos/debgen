@@ -15,6 +15,10 @@ $router->get('/changelog/', function() {
   require_once __DIR__ . '/views/changelog.php';
 });
 
+$router->get('/feedback/', function() {
+  require_once __DIR__ . '/views/feedback.php';
+});
+
 $router->get('/admin/', function() {
     if(isset($_SESSION['user_id']) && $_SESSION['user_id'] =! '')
       {require_once __DIR__ . '/views/admin.php';}
